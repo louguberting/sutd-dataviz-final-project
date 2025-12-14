@@ -1,0 +1,45 @@
+	h1 {
+		text-align: center;
+		font-family: "VT323", monospace;
+		font-size: 3rem;		
+	}
+	h2 {
+		text-align: center;
+		font-family: "VT323", monospace;
+		font-size: 2rem;
+	}
+	body {
+		max-width: 800px;
+		margin: auto;
+		font-size: 16px;
+		font-family: "Roboto", sans-serif;
+		background-color: #FFD700;
+	}
+	main {
+		background-color: white;
+		padding: 0.5rem 2rem;
+		margin: 16px;
+		border: 5px solid black;
+		border-radius: 16px;
+	}
+	figure {
+  /*border: thin silver solid;*/
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/*img {
+  max-width: 220px;
+  max-height: 150px;
+}*/
+
+figcaption {
+  /*background-color: #ffffff;*/
+  color: black;
+  /*font: italic smaller sans-serif;*/
+  padding: 3px;
+  text-align: center;
+}

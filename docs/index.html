@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Final Project Proposal</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Header font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-<!-- Body font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=VT323&display=swap" rel="stylesheet">
+<head>
+	<title>Final Project Proposal</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Header font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+	<!-- Body font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=VT323&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css" />
+	<!-- Scripts as modules-->
+	<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+	<script type="module" src="scripts/colorrace.js"></script>
+
 </head>
+
 <body>
 
-<main>
-<h1>Final Project Proposal</h1>
-<h2>Lou Guberti-Ng</h2>
-<p>
-	For decades, children and adults of all ages have been clicking and clacking Lego bricks into iconic designs and new creations from their wildest imaginations. I can trace so many of the moments of my life with Lego. If I close my eyes, I can be in my old living room in 1994, my grandfather watching Bob Ross painting happy trees and me plugging away at <a href="https://rebrickable.com/sets/6076-1/dark-dragons-den/#comments" target="_blank">6076 Dark Dragon’s Den</a>. It’s 1996, I’m watching the neighbor intently piece together <a href="https://rebrickable.com/sets/6090-1/royal-knights-castle/#comments" target="_blank">6090 Royal Knight's Castle</a>.
-</p>
-<figure>
-  <img
-    src="RoyalKnightsCastle.jpg"
-    alt="The Royal Knight's Castle in all it's glory" />
-  <figcaption>This set is my white whale.<a href="https://www.ebay.com/itm/126839048295" target="_blank">Here it is for an eye watering $480 USD.</a></figcaption>
-</figure>
-<p>
-	Blink again and my brother and I are tearing through every set from 2005’s Star Wars Revenge of the Sith release. It’s 2019 and after nearly doubling my salary with my first Salesforce job the new <a href="https://rebrickable.com/sets/75218-1/x-wing-starfighter/#comments" target="_blank">75218 X-Wing Starfighter</a> is a fitting reward. It’s two days ago, I’m explaining to my son why he simply <b><i>can’t</i></b> tear the back doors off the <a href="https://rebrickable.com/sets/10497-1/galaxy-explorer/#comments" target="_blank">10497 Galaxy Explorer</a> I spent over 5 hours on.
-</p>
-<p>
-	With so many years of sets composed of so many different types of pieces and colors, I thought that Lego would be a great place to turn for the Final Project for this class. As a fan for over thirty years, I’ve seen the shifts in the sets Lego produces. With the passing years, the variety of colors and types of pieces have exploded. Sets were previously themed with generic characters like Knights, Pirates or different Space factions of Lego’s own creation. The last 20 years have seen an almost total takeover of licensed sets with themes such as Star Wars, Harry Potter, Marvel and numerous others. I have some ambivalence about this trend. Sure, growing up I was always trying to turn my store bought sets into X-Wings and TIE Fighters. But does it stunt a child's creativity to have everything served up to them prepackaged? I want to explore these changes in my project; showing the different trends using fun, playful interactive visualizations.
-</p>
-<p>
-	Any Lego lover will tell you that having sorted and organized parts will set you up for success in building your own creation. For data visualization the process is no different. I’m fortunate to have an excellent data source to start from in the site <a href="https://rebrickable.com/home/" target="_blank">Rebrickable</a>. Touting itself as a site to “easily find official or custom sets you can build using your existing LEGO sets”, Rebrickable has an extensive <a href="https://rebrickable.com/downloads/" target="_blank">database of sets, parts, colors, and themes</a> across Lego’s long history which it makes freely available. These data tables have primary keys to make joining them together simple. The colors table includes hex codes which could lend themselves to some really fun visualizations like a comparison of the top colors over time. I can enrich the theme table by categorizing them by license and join it to the sets table to show the shift into licensed sets in the 2000s. My plan is to work with the data tables locally on my computer and pre-aggregate it for use in my visualizations. The work is a bit daunting since the inventory_parts table which contains the list of pieces in each set has 120 MBs of data making initial exploration more difficult. I’m excited to work through that data with Python and really test my abilities.
-</p>
-<p>
-	Additionally, Rebrickable has a <a href="https://rebrickable.com/api/" target="_blank">REST API</a> that developers can use to access their data tables. This API is rate limited however to protect against malicious bulk downloads of the data. I’d love to build a  search tool on my project page that allows a user to search for a set and produce a tree map of the colors used in that set. This tool would be delightful to use and allow my project to include real time data.
-</p>
-<p>
-	I believe this project will support my learning goals and challenge me to create great looking visualizations. While in the past I’ve used tools like Microsoft Excel, SQL and Tableau to make visualizations this will be my first time using Javascript. The Python scripting for the project will be a significant step up from the earlier work I’ve done in programming classes at SUTD. I’m excited to stretch my skills and share my passion for Lego with this work.
-</p>
-</main>
+	<main>
+		<h1>Final Project Proposal</h1>
+		<h2>Lou Guberti-Ng</h2>
+		<p>
+			For decades, children and adults of all ages have been clicking and clacking Lego bricks into iconic designs
+			and new creations from their wildest imaginations. I can trace so many of the moments of my life with Lego.
+			If I close my eyes, I can be in my old living room in 1994, my grandfather watching Bob Ross painting happy
+			trees and me plugging away at <a href="https://rebrickable.com/sets/6076-1/dark-dragons-den/#comments"
+				target="_blank">6076 Dark Dragon’s Den</a>. It’s 1996, I’m watching the neighbor intently piece together
+			<a href="https://rebrickable.com/sets/6090-1/royal-knights-castle/#comments" target="_blank">6090 Royal
+				Knight's Castle</a>.
+		</p>
+		<figure>
+			<img src="RoyalKnightsCastle.jpg" alt="The Royal Knight's Castle in all it's glory" />
+			<figcaption>This set is my white whale.<a href="https://www.ebay.com/itm/126839048295" target="_blank">Here
+					it is for an eye watering $480 USD.</a></figcaption>
+		</figure>
+		<p>
+			Blink again and my brother and I are tearing through every set from 2005’s Star Wars Revenge of the Sith
+			release. It’s 2019 and after nearly doubling my salary with my first Salesforce job the new <a
+				href="https://rebrickable.com/sets/75218-1/x-wing-starfighter/#comments" target="_blank">75218 X-Wing
+				Starfighter</a> is a fitting reward. It’s two days ago, I’m explaining to my son why he simply
+			<b><i>can’t</i></b> tear the back doors off the <a
+				href="https://rebrickable.com/sets/10497-1/galaxy-explorer/#comments" target="_blank">10497 Galaxy
+				Explorer</a> I spent over 5 hours on.
+		</p>
+		<p>
+			With so many years of sets composed of so many different types of pieces and colors, I thought that Lego
+			would be a great place to turn for the Final Project for this class. As a fan for over thirty years, I’ve
+			seen the shifts in the sets Lego produces. With the passing years, the variety of colors and types of pieces
+			have exploded. Sets were previously themed with generic characters like Knights, Pirates or different Space
+			factions of Lego’s own creation. The last 20 years have seen an almost total takeover of licensed sets with
+			themes such as Star Wars, Harry Potter, Marvel and numerous others. I have some ambivalence about this
+			trend. Sure, growing up I was always trying to turn my store bought sets into X-Wings and TIE Fighters. But
+			does it stunt a child's creativity to have everything served up to them prepackaged? I want to explore these
+			changes in my project; showing the different trends using fun, playful interactive visualizations.
+		</p>
+		<p>
+			Any Lego lover will tell you that having sorted and organized parts will set you up for success in building
+			your own creation. For data visualization the process is no different. I’m fortunate to have an excellent
+			data source to start from in the site <a href="https://rebrickable.com/home/"
+				target="_blank">Rebrickable</a>. Touting itself as a site to “easily find official or custom sets you
+			can build using your existing LEGO sets”, Rebrickable has an extensive <a
+				href="https://rebrickable.com/downloads/" target="_blank">database of sets, parts, colors, and
+				themes</a> across Lego’s long history which it makes freely available. These data tables have primary
+			keys to make joining them together simple. The colors table includes hex codes which could lend themselves
+			to some really fun visualizations like a comparison of the top colors over time. I can enrich the theme
+			table by categorizing them by license and join it to the sets table to show the shift into licensed sets in
+			the 2000s. My plan is to work with the data tables locally on my computer and pre-aggregate it for use in my
+			visualizations. The work is a bit daunting since the inventory_parts table which contains the list of pieces
+			in each set has 120 MBs of data making initial exploration more difficult. I’m excited to work through that
+			data with Python and really test my abilities.
+		</p>
+		<p>
+			Additionally, Rebrickable has a <a href="https://rebrickable.com/api/" target="_blank">REST API</a> that
+			developers can use to access their data tables. This API is rate limited however to protect against
+			malicious bulk downloads of the data. I’d love to build a search tool on my project page that allows a user
+			to search for a set and produce a tree map of the colors used in that set. This tool would be delightful to
+			use and allow my project to include real time data.
+		</p>
+		<p>
+			I believe this project will support my learning goals and challenge me to create great looking
+			visualizations. While in the past I’ve used tools like Microsoft Excel, SQL and Tableau to make
+			visualizations this will be my first time using Javascript. The Python scripting for the project will be a
+			significant step up from the earlier work I’ve done in programming classes at SUTD. I’m excited to stretch
+			my skills and share my passion for Lego with this work.
+		</p>
+	</main>
 </body>
 
-<style>
-	h1 {
-		text-align: center;
-		font-family: "VT323", monospace;
-		font-size: 3rem;
-		text-emphasis-color: ;
-	}
-	h2 {
-		text-align: center;
-		font-family: "VT323", monospace;
-		font-size: 2rem;
-	}
-	body {
-		max-width: 800px;
-		margin: auto;
-		font-size: 16px;
-		font-family: "Roboto", sans-serif;
-		background-color: #FFD700;
-	}
-	main {
-		background-color: white;
-		padding: 0.5rem 2rem;
-		margin: 16px;
-		border: 5px solid black;
-		border-radius: 16px;
-	}
-	figure {
-  /*border: thin silver solid;*/
-  display: flex;
-  flex-flow: column;
-  padding: 5px;
-  max-width: 600px;
-  margin: auto;
-}
-
-/*img {
-  max-width: 220px;
-  max-height: 150px;
-}*/
-
-figcaption {
-  /*background-color: #ffffff;*/
-  color: black;
-  /*font: italic smaller sans-serif;*/
-  padding: 3px;
-  text-align: center;
-}
-
-</style>
 </html>
