@@ -43,3 +43,9 @@ figcaption {
   padding: 3px;
   text-align: center;
 }
+
+.axis-label {
+            font-size: 14px;
+            fill: #333;
+            text-anchor: middle;
+        }
