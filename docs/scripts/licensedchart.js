@@ -14,7 +14,7 @@ const svg = d3.select("#licensed_chart")
 
 //Read the data
 
-const data = await d3.csv("/Python/themeagg.csv");
+const data = await d3.csv("../Python/themeagg.csv");
 
 
 // // group the data: one array for each value of the X axis.
